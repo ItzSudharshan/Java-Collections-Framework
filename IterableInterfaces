@@ -1,0 +1,5 @@
+What is the Iterable Interface? 🤔
+The Iterable interface is a part of Java's core library, located in java.lang. It represents a collection that can be traversed, meaning you can visit each element one by one in sequence. The Iterable interface only contains a single abstract method:
+
+Iterator<T> iterator(): This method returns an Iterator object that provides the mechanism for iterating over elements in the collection.
+------------------------------------------------------------------------------------------------------------------------------------------------
