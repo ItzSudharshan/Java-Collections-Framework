@@ -3,3 +3,31 @@ The Iterable interface is a part of Java's core library, located in java.lang. I
 
 Iterator<T> iterator(): This method returns an Iterator object that provides the mechanism for iterating over elements in the collection.
 ------------------------------------------------------------------------------------------------------------------------------------------------
+Common Implementations of List Interface 📚
+ArrayList: The go-to choice for most list operations, providing fast, dynamic resizing.
+
+Best for: Random access, adding elements to the end.
+
+LinkedList: Great for frequent insertions and deletions.
+
+Best for: Manipulating data (adding/removing elements) in the middle of a list.
+
+Vector: A thread-safe version of ArrayList.
+
+Best for: Multithreaded applications.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+ArrayList: A flexible and dynamic data structure in Java that allows for easy management of data by automatically resizing as elements are added or removed.
+Key Points
+Dynamic Resizing: Automatically adjusts size as elements are added or removed.
+Built-in Methods: Provides convenient methods like add(), remove(), get(), and contains(),size()
+Efficient Access: Offers quick access to elements, balancing memory and speed.
+add(E element): Adds an item to the end. Super simple.
+get(int index): Gets an item at the specified index. No searching around.
+remove(int index): Removes the item at the specified index. Like unfriending someone who keeps posting spoilers.
+contains(Object o): Checks if an item is present. Helps you find things easily, like using a search bar.
+size(): Returns the number of items. So you can know how many things you’re dealing with (like checking how many people RSVPed to your party).
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Using set() Method:
+
+It replaces the element at the specified index with newValue using the set(index, element) method.
