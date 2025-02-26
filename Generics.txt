@@ -1,0 +1,12 @@
+Generics in Java are a feature that allows you to write code that can operate on objects of various types while ensuring type safety. They enable you to define classes, interfaces, and methods with type parameters, which act as placeholders for the actual data types used. This makes the code more flexible, reusable, and type-safe. Generics were introduced to reduce the risk of runtime errors, eliminate the need for redundant code, and enhance code readability by clearly specifying the types it operates on.
+-------------------------------------------------------------------------------------------------------------------------------
+Generic Classes
+A generic class is a class that can work with any data type. You define the type when you instantiate the class. It’s like creating a locker at your college—depending on what you need to store, you can use the locker for books, sports equipment, or lunch.
+--------------------------------------------------------------------------------------------------------------------------------
+Generic Methods
+A generic method is a method that can operate on objects of various types. Just like you have one teacher who can teach multiple subjects, a generic method can work with different types of objects.
+------------------------------------------------------------------------------------------------------------------------------
+"How does the diamond operator work, and why do we use it?" 💎
+
+The diamond operator (<>) is used to simplify generic type declaration. Instead of writing List<String> names = new ArrayList<String>();, you just write List<String> names = new ArrayList<>(); and Java infers the type, keeping your code cleaner.
+--------------------------------------------------------------------------------------------------------------------------------
