@@ -1,0 +1,53 @@
+ArrayList
+Dynamic Array
+Fast (O(1)) for random access
+Slow (O(n)) except at end  for insertion deletion
+Thread Safety -> Not synchronized
+Iteration performance -> Fast
+Use Cases -> Random access-heavy operations, batch processing
+
+LinkedList
+Doubly-Linked List
+Slow (O(n)) for random access
+Insertion Deletion Fast (O(1)) once position is reached
+Thread Safety -> Not synchronized
+Iteration Performance -> Slightly slower than ArrayList due to cache locality
+Use cases -> Frequent insertions/deletions, queue implementations
+
+Vector
+Dynamic Array
+Fast (O(1)) for random access
+insertion Deletion -> Slow (O(n)) except at end
+Thread Safety -> Synchronized (thread-safe)
+Iteration Performance -> Similar to ArrayList
+Use Cases -> Thread-safe operations, legacy code maintenance
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ArrayList
+Best For:
+Scenarios requiring frequent access to elements via index.
+Situations where the number of elements is known beforehand or changes infrequently.
+Applications where memory usage needs to be optimized.
+
+Avoid When:
+You have frequent insertions and deletions, especially in the middle of the list.
+----------------------------------------------------------------------------------------------------------------------------------------
+LinkedList
+Best For:
+Applications with frequent insertions and deletions
+Implementing data structures like queues, stacks, and deques.
+
+Scenarios where you don't require random access to elements.
+Avoid When:
+You need quick access to elements via index.
+Memory overhead is a concern due to additional pointers.
+-------------------------------------------------------------------------------------------------------------------------------------
+Vector
+Best For:
+Legacy applications that require synchronized (thread-safe) operations.
+Scenarios where thread safety is essential without external synchronization.
+
+Avoid When:
+You don't need thread safety, as synchronization can lead to performance bottlenecks.
+Modern alternatives like ArrayList with external synchronization are preferred for better performance.
+------------------------------------------------------------------------------------------------------------------------------------

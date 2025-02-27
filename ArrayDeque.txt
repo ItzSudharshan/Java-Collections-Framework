@@ -1,0 +1,93 @@
+An ArrayDeque in Java is a resizable array implementation of the Deque interface (pronounced "Deck"). It allows elements to be added or removed from both ends, supporting both FIFO (First In, First Out) and LIFO (Last In, First Out) operations.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Characteristics of ArrayDeque
+Double-Ended Functionality
+With an ArrayDeque, you can add or remove items from both ends—kind of like deciding whether you want to hop in front of a burger line or quietly sneak in at the back.
+
+Add Elements: You can add elements at both the head and tail of the deque using addFirst() and addLast() respectively.
+
+Remove Elements: You can also remove elements from both ends using removeFirst() and removeLast(). This allows ArrayDeque to act both as a stack (LIFO) and a queue (FIFO).
+------------------------------------------------------------------------------------------------------------------------------------
+Basic Operations with ArrayDeque
+1. Adding Elements
+Method: addFirst(E element) or addLast(E element)
+Purpose: Adds an element to either the front or the back of the deque
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class TaskManager {
+    public static void main(String[] args) {
+        // Create an ArrayDeque to manage tasks
+        Deque<String> taskList = new ArrayDeque<>();
+
+        // Add tasks to the list
+        taskList.addLast("Write Code");  // Adding to the end of the list
+        taskList.addLast("Test Code");
+        taskList.addFirst("Fix Urgent Bug");  // Adding to the front of the list
+
+        System.out.println("Task List: " + taskList);
+    }
+}
+
+Task List: [Fix Urgent Bug, Write Code, Test Code]
+---------------------------------------------------------------------------------------------------------------------------------------
+Removing Elements
+Method: removeFirst() or removeLast()
+
+Purpose: Removes and returns an element from either the front or the back of the deque.
+public class TaskManager {
+    public static void main(String[] args) {
+        Deque<String> taskList = new ArrayDeque<>();
+
+        taskList.addLast("Write Code");
+        taskList.addLast("Test Code");
+        taskList.addFirst("Fix Urgent Bug");
+
+        // Complete the most urgent task first
+        String urgentTask = taskList.removeFirst();
+        System.out.println(urgentTask + " has been completed.");
+
+        System.out.println("Updated Task List: " + taskList);
+    }
+}
+Fix Urgent Bug has been completed.
+Updated Task List: [Write Code, Test Code]
+---------------------------------------------------------------------------------------------------------------------------------------
+3. Peek (Viewing Elements Without Removing)
+Method: peekFirst() or peekLast()
+
+Purpose: Views, but does not remove, the element at either end of the deque.
+
+This is like checking your to-do list to see what’s coming up next without actually doing it.
+
+Example:
+public class TaskManager {
+    public static void main(String[] args) {
+        Deque<String> taskList = new ArrayDeque<>();
+
+        taskList.addLast("Write Code");
+        taskList.addLast("Test Code");
+
+        // Peek at the next task to be done
+        String nextTask = taskList.peekFirst();
+        System.out.println("Next task: " + nextTask);
+
+        System.out.println("Task List remains: " + taskList);
+    }
+}
+Output:
+
+Next task: Write Code
+Task List remains: [Write Code, Test Code]
+-----------------------------------------------------------------------------------------------------------------------------------
+Use Cases for ArrayDeque
+1. Task Management
+If you’re managing tasks that vary in priority, ArrayDeque allows you to add high-priority tasks at the front and keep regular tasks at the back. Imagine you're the manager at a fast-food joint—customers in the drive-thru (high priority) come first, but you still need to handle dine-in customers (low priority).
+
+2. Undo/Redo Functionality
+In applications like text editors, ArrayDeque can be used to maintain stacks of actions for Undo and Redo operations, where you can add actions to the top of the stack and undo them as needed.
+
+3. Browser History
+Navigating forward and backward in a web browser can be managed efficiently with an ArrayDeque. You can add pages to the deque, and either go back (remove from the end) or forward (add back)
+------------------------------------------------------------------------------------------------------------------------------

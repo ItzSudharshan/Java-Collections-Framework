@@ -1,0 +1,30 @@
+Vector 
+Vector is a dynamic array, similar to ArrayList. It can grow and shrink as needed, and was one of the first classes in Java to provide such capabilities. Historically, Vector was widely used because it provided a convenient way to work with resizable arrays before the Collection Framework was introduced in Java 1.2.
+
+Key Characteristics of Vector:
+Resizable Array: Like ArrayList, it can dynamically grow or shrink.
+Thread-Safe: By default, Vector is synchronized, making it safe for use by multiple threads.
+Legacy Class: Introduced in Java 1.0, Vector predates the modern Collection Framework and is now considered a legacy class.
+
+Stack
+Stack is a subclass of Vector and represents a Last-In-First-Out (LIFO) data structure. It's used when you need to keep track of items that should be processed in reverse order.
+Key Characteristics of Stack:
+LIFO Data Structure: Items are added and removed in a Last-In-First-Out manner.
+Built on Vector: Since Stack is a subclass of Vector, it inherits all of Vector’s features, including synchronization.
+Legacy Class: Introduced in Java 1.0, Stack is considered a legacy class and is not recommended for modern use.
+
+Vector Synchronization
+In Vector, methods like add() and get() are synchronized, meaning only one thread can call these methods at a time. This prevents concurrent modification exceptions and maintains data integrity when multiple threads read or write to the Vector.
+Vector<Integer> vector = new Vector<>();
+vector.add(1);
+vector.add(2);
+int value = vector.get(0); // Thread-safe access
+While this built-in thread safety was useful when manual concurrency was challenging, the downside is that synchronized methods can slow down performance when many threads need access concurrently.
+
+
+Stack Synchronization
+Since Stack extends Vector, it inherits the same synchronized behavior. This means operations like push() and pop() are also synchronized.
+Stack<String> stack = new Stack<>();
+stack.push("Hello");
+stack.push("World");
+String topElement = stack.pop(); // Thread-safe access

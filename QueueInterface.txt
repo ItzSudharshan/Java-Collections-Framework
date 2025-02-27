@@ -1,0 +1,117 @@
+A Queue Interface in Java is a type of collection that holds elements in a specific order, processing them one at a time in the order they were added. This principle is known as First-In-First-Out (FIFO).
+
+Basic Queue Operations
+Enqueue (Adding Elements to the Queue)
+Method: add(E element) or offer(E element)
+Purpose: Adds an element to the end of the queue.
+add() will throw an exception if the queue is full, while offer() returns false.
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ServerRequestQueue {
+    public static void main(String[] args) {
+        // Create a Queue using LinkedList
+        Queue<String> requestQueue = new LinkedList<>();
+
+        // Enqueue requests into the server queue
+        requestQueue.add("Request 1");
+        requestQueue.add("Request 2");
+        requestQueue.add("Request 3");
+
+        System.out.println("Request Queue: " + requestQueue);
+    }
+}
+
+Output: Request Queue: [Request 1, Request 2, Request 3]
+
+---------------------------------------------------------------------
+Dequeue (Removing Elements from the Queue)
+Method: remove() or poll()
+
+Purpose: Removes and returns the element at the front of the queue.
+
+remove() will throw an exception if the queue is empty, while poll() returns null.
+
+It's like finally getting to the front of the burger queue and receiving your order! If there are no burgers left, poll() just says, "Oops, nothing left." but remove() might throw a tantrum (exception).
+
+public class ServerRequestQueue {
+    public static void main(String[] args) {
+        Queue<String> requestQueue = new LinkedList<>();
+
+        requestQueue.add("Request 1");
+        requestQueue.add("Request 2");
+        requestQueue.add("Request 3");
+
+        // Dequeue the first request
+        String firstRequest = requestQueue.poll();
+        System.out.println(firstRequest + " has been processed.");
+
+        System.out.println("Updated Request Queue: " + requestQueue);
+    }
+}
+
+OUTPUT: Request 1 has been processed.
+Updated Request Queue: [Request 2, Request 3]
+------------------------------------------------------------------------------------------------------------------------
+Peek (Viewing the Front Element)
+Method: peek()
+
+Purpose: Retrieves, but does not remove, the element at the front of the queue. If the queue is empty, peek() returns null.
+
+public class ServerRequestQueue {
+    public static void main(String[] args) {
+        Queue<String> requestQueue = new LinkedList<>();
+
+        requestQueue.add("Request 1");
+        requestQueue.add("Request 2");
+        requestQueue.add("Request 3");
+
+        // Peek at the front of the queue
+        String nextRequest = requestQueue.peek();
+        System.out.println("Next request in line: " + nextRequest);
+
+        System.out.println("Request Queue remains: " + requestQueue);
+    }
+}
+
+OUTPUT: Next request in line: Request 1
+Request Queue remains: [Request 1, Request 2, Request 3]
+--------------------------------------------------------------------------------------------------------------------------------
+isEmpty (Checking if the Queue is Empty)
+Method: isEmpty()
+
+Purpose: Checks whether the queue has any elements.
+
+Think of it like asking, "Hey, is anyone still in line for the burger?" If no one is left, you know the burgers are all gone (or everyone got one)
+
+public class ServerRequestQueue {
+    public static void main(String[] args) {
+        Queue<String> requestQueue = new LinkedList<>();
+
+        System.out.println("Is the request queue empty? " + requestQueue.isEmpty());
+
+        requestQueue.add("Request 1");
+        System.out.println("Is the request queue empty after adding a request? " + requestQueue.isEmpty());
+    }
+}
+
+OUTPUT :>Is the request queue empty? true
+Is the request queue empty after adding a request? false
+-------------------------------------------------------------------------------------------------------------------------
+Why Use Queues?
+Queues are incredibly useful in both everyday scenarios and programming. Here’s why incorporating queues into your Java programs can make a significant difference.
+
+1. Orderly Processing
+Queues ensure that every request is processed in the order it arrived, just like how the Kodnest server processes requests one by one to avoid overwhelming the system.
+
+2. Managing Resources Efficiently
+When too many users send requests to the Kodnest server simultaneously, some requests may time out if the server is overwhelmed. Queues help manage this by processing each request one at a time, ensuring the server doesn't get overloaded.
+
+3. Enhancing User Experience
+In web applications, managing user requests efficiently can lead to faster response times and fewer errors. By using queues, you can handle user interactions smoothly, ensuring that each request is processed without unnecessary delays or failures.
+
+4. Simplifying Complex Processes
+Queues help break down complex processes into manageable steps. For example, processing multiple print jobs or handling concurrent user actions becomes much simpler when managed through queues, as each task is handled in a structured manner.
+
+-----------------------------------------------------------------------------------------------------------------------------
