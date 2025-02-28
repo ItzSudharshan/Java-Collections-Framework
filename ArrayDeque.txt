@@ -90,4 +90,4 @@ In applications like text editors, ArrayDeque can be used to maintain stacks of 
 
 3. Browser History
 Navigating forward and backward in a web browser can be managed efficiently with an ArrayDeque. You can add pages to the deque, and either go back (remove from the end) or forward (add back)
-------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------

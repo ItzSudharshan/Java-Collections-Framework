@@ -1,0 +1,12 @@
+Min-Heap Implementation
+The PriorityQueue in Java is built on top of a min-heap data structure. A heap is a special type of binary tree that maintains a specific order property—where each parent node is smaller (in a min-heap) or larger (in a max-heap) than its children. In a PriorityQueue, the min-heap ensures that the smallest (or highest-priority) element is always at the top, making it efficient to retrieve and remove
+--------------------------------------------------------------------------------
+How Does It Work?
+Insertion: When an element is added to the PriorityQueue, it is inserted in such a way that the heap property is maintained. The element is initially placed at the next available position (to maintain a complete binary tree), and then it is "bubbled up" to its correct position based on its value.
+
+Deletion: When removing the highest-priority element (the root of the heap), the last element in the heap takes its place temporarily. This element is then "bubbled down" to restore the heap property, ensuring that the new root is the smallest element.
+
+Logarithmic Complexity: Because the heap is a balanced binary tree, adding or removing an element requires at most O(log n) operations, making these operations very efficient for managing priority-based tasks.
+----------------------------------------------------------------------------------
+A min-heap is particularly useful for a PriorityQueue because it guarantees that the smallest (or highest-priority) element is always quickly accessible at the root. This makes PriorityQueue ideal for scenarios where efficient access to the minimum element is essential, such as scheduling or event management.
+-------------------------------------------------------------------------------
