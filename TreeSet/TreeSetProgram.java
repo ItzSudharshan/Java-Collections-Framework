@@ -1,8 +1,9 @@
+package TreeSet;
+
 import java.util.*;
 public class TreeSetProgram {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Number of Elements: ");
 		int n = sc.nextInt();
@@ -16,7 +17,7 @@ public class TreeSetProgram {
 		for(int ele: set) {
 			System.out.println(ele+" ");
 		}
-
+		sc.close();
 	}
 
 }
