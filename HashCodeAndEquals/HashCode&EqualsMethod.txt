@@ -1,0 +1,19 @@
+hashCode() Method
+The hashCode() method returns an integer value, called a hash code, which is used by hash-based collections like HashSet to quickly find an element. Think of it as an object's address or a unique identifier. If two objects are equal according to equals(), they must return the same hashCode().
+-------------------------------------------------------------------------------------------------------------------
+equals() Method
+The equals() method checks if two objects are logically equivalent. It’s used to determine if two instances are actually "equal" in terms of their state (i.e., their fields and values).
+
+Examples
+----------------------------------------------------------------------------------------------------------
+
+Overriding hashCode() and equals() in custom objects ensures proper functioning of hash-based collections, preventing duplicates and ensuring efficient data management.
+-----------------------------------------------------------------------------------------------------------
+Interviewer: What role does the hashCode() method play in hash-based collections like HashSet?
+
+Ideal Answer: The hashCode() method returns an integer value, called a hash code, which acts as a unique identifier for an object. In hash-based collections like HashSet, this hash code is used to determine the bucket where the object should be placed. When adding an element to the set, the hashCode() helps in quickly finding the appropriate bucket, making the process of locating objects more efficient.
+---------------------------------------------------------------------------------------------------------
+Interviewer: How does the equals() method ensure the uniqueness of objects in a HashSet?
+
+Ideal Answer: The equals() method checks if two objects are logically equivalent by comparing their states (i.e., fields and values). In a HashSet, when an object is added, the equals() method is used to determine if an equivalent object already exists in the set. If two objects are considered equal based on equals(), the set will only keep one of them, ensuring that no duplicates are added.
+---------------------------------------------------------------------------------------------------------------
