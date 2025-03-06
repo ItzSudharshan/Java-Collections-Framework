@@ -15,5 +15,5 @@ Ideal Answer: The hashCode() method returns an integer value, called a hash code
 ---------------------------------------------------------------------------------------------------------
 Interviewer: How does the equals() method ensure the uniqueness of objects in a HashSet?
 
-Ideal Answer: The equals() method checks if two objects are logically equivalent by comparing their states (i.e., fields and values). In a HashSet, when an object is added, the equals() method is used to determine if an equivalent object already exists in the set. If two objects are considered equal based on equals(), the set will only keep one of them, ensuring that no duplicates are added.
+Ideal Answer: The equals() method checks if two objects are logically equivalent by comparing their states (i.e., fields and values). In a HashSet, when an object is added, the equals() method is used to determine if an equivalent object already exists in the set. If two objects are considered equal based on equals(),the set will only keep one of them, ensuring that no duplicates are added.
 ---------------------------------------------------------------------------------------------------------------
