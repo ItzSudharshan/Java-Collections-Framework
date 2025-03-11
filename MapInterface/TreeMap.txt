@@ -1,0 +1,26 @@
+The TreeMap class in Java, part of the java.util package, provides a data structure that stores key-value pairs while maintaining a sorted order of the keys. Unlike HashMap or LinkedHashMap, TreeMap sorts its entries either in their natural order (e.g., alphabetical or numerical) or by a custom comparator if specified. It uses a Red-Black tree under the hood to ensure that all elements are always sorted and accessible in logarithmic time.
+--------------------------------
+Key Characteristics
+Sorted Order: Keys are always sorted either in their natural order or as defined by a custom comparator.
+
+Unique Keys: Every key must be unique. Adding a duplicate key will replace the existing value.
+
+Navigable: Allows easy navigation through its elements, such as finding the closest match.
+
+Not Thread-Safe: Requires external synchronization if used in a concurrent environment.
+--------------------------------------------------------------------------------------
+Key Methods of TreeMap
+In Swiggy, each restaurant has an ID and ratings, and TreeMap helps to organize these restaurants in a sorted manner.
+
+put(): Adds a new key-value pair to the map, such as adding a restaurant and its rating.
+
+get(): Retrieves the value for a specific key, like getting the rating of a restaurant.
+
+remove(): Removes a key-value pair, e.g., when a restaurant shuts down.
+
+firstKey(): Returns the first (lowest) key, such as the restaurant with the earliest alphabetical name.
+
+lastKey(): Returns the last (highest) key, which could represent the highest-rated restaurant.
+
+higherKey(): Returns the next higher key after a specified key, like finding the restaurant that comes next in alphabetical order.
+------------------------------------------------------------------------------------------------------------

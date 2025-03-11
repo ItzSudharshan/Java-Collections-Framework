@@ -1,0 +1,31 @@
+HashMap provides fast access, it doesn't maintain the order of elements. LinkedHashMap preserves the insertion order, which is particularly useful for Swiggy when displaying restaurants in the order they joined, highlighting new additions.
+--------------------------
+Key Characteristics
+Unique Keys: Each key must be unique. Adding a duplicate key will overwrite the old value.
+
+Order Preservation: Maintains the order in which elements are added.
+
+Null Keys and Values: Supports one null key and multiple null values.
+
+Not Thread-Safe: Requires synchronization for concurrent access.
+------------------------------------------------------------
+Key Methods of LinkedHashMap
+put(): Adds a new key-value pair to the map, such as adding a new restaurant to Swiggy.
+
+get(): Retrieves the value associated with a specific key, like getting restaurant details by ID.
+
+remove(): Removes a key-value pair, for instance, when a restaurant ends its partnership.
+
+containsKey(): Checks if a specific key exists in the map, helpful to verify if a restaurant is still listed.
+
+keySet(): Returns a set view of all keys, like getting a list of all restaurant IDs.
+
+values(): Returns a collection view of all values, such as restaurant names and ratings.
+-----------------------------------------------------------------------------------------------
+Summary
+LinkedHashMap maintains the order of elements based on insertion.
+
+It is ideal for scenarios where the order of data matters, such as displaying newly added restaurants first.
+
+Similar to HashMap but with predictable iteration
+------------------------------------------------------------------------------------------

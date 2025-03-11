@@ -1,0 +1,18 @@
+WeakHashMap
+A WeakHashMap is like a map that doesn't hold on tightly to its keys. If there's no other reference to a key outside of the map, that key-value pair can be removed by the garbage collector. This is great for temporary data that you don't want to keep forever. Think of it like Swiggy's temporary cache for trending restaurants—once a restaurant is no longer trending, it makes sense to remove it to save memory.
+
+Use Case: Perfect for caching where data should be cleared when it's no longer needed.
+
+Garbage Collection: Keys without other references are automatically removed.
+
+Flexible Cache: Helps keep memory low by letting the garbage collector clean up unneeded data.
+---------------------------------------------------------------------------------------------------------------------------
+IdentityHashMap
+An IdentityHashMap compares keys by their reference, not by their value. Imagine Swiggy wants to track each specific restaurant object, even if two restaurants have the exact same name and details. IdentityHashMap is the solution here—it treats two objects as different unless they are the exact same instance in memory.
+
+Use Case: When you need to compare keys by reference (==) instead of comparing values (equals()).
+
+Unique Instances: Helps track distinct objects, even if they look the same.
+
+Special Handling: Skips the usual equals() and hashCode() methods for comparisons.
+--------------------------------------------------------------------------------------------------------------------------
